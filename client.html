@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<title>My Web Page</title>
+<style type="text/css">
+body{
+	
+	width: 990px; /* how wide to make your web page */
+	background-color: teal; /* what color to make the background */
+	margin: 0 auto;
+	padding: 0;
+	font:12px/16px Verdana, sans-serif; /* default font */
+}
+div#main{
+	background-color: #FFF;
+	margin: 0;
+	padding: 10px;
+}
+div#userContainer{
+	background-color: #C8C8C8;
+}
+div#gameContainer{
+	background-color: #CCFFFF;
+}
+#gameContainer{
+	margin: 0 auto;
+	width: 960px;
+	height: 480px;
+}
+#controls{
+	height: 20px;
+	text-align: center;
+}
+#game{
+	width: 960px;
+	height: 480px;
+	border: 1px solid black;
+}
+</style>
+</head>
+<body><div id="main">
+<script src="/socket.io/socket.io.js"></script>
+<script src="//cdn.sencha.io/ext-4.1.1-gpl/ext-all-dev.js"></script>
+
+<div id="gameContainer" style="display:none;">
+	<div id="game"></div>
+</div>
+ <div id="userContainer" style="display;">
+	<dl id="others"></dl>
+	<p>
+		<input type="text" id="username" placeholder="Username"/>
+		<button id="join">join</button>
+		<button id="ps">pause</button>
+	</p>
+ </div>
+ 
+<script src="pong-game.js"></script>
+<script src="client.js"></script>
+</div></body>
+</html>
